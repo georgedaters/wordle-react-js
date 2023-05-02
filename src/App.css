@@ -1,0 +1,199 @@
+
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.letter-box {
+    background: #b8b9c1;
+    border: solid 1px black;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    flex-grow: 0;
+}
+
+.imageContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+img {
+    width: 200px;
+}
+
+#nextWordleCountdown {
+    margin-bottom: 30px;
+}
+
+.key-box {
+    background: #b8b9c1;
+    border: solid 1px black;
+    display: inline-block;
+    width: 60px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    flex-grow: 0;
+}
+
+.letter-grid-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.key-grid-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.key-box-enter, .key-box-delete {
+    width: 80px;
+}
+
+.word-grid {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: white;
+    width: 100%;
+}
+
+#key-grid button {
+    color: white;
+}
+
+.end-game-container {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+#end-game-text {
+    font-size: larger;
+}
+
+.play-container {
+    width: 100%;
+}
+
+.play-flex {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#nextWordleCountdown {
+    text-align: center;
+    font-weight: bold;
+}
+
+#key-grid {
+    color: white;
+    width: 100%;
+    margin: auto;
+}
+
+#playButtonContainer {
+    text-align: center;
+}
+
+.correct-letter-guess {
+    background-color: #62c762;
+}
+
+.incorrect-letter-guess {
+    background-color: grey;
+}
+
+.misplaced-letter-guess {
+    background-color: orange;
+}
+
+#backButton {
+    position: absolute;
+    right: 12px;
+    top: 62px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #backButton {
+        position: absolute;
+        right: 12px;
+        top: 32px;
+        width: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .key-box {
+        font-size: 24px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+    .key-grid-row {
+        gap: 2px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .letter-box {
+        flex-grow: 1;
+    }
+
+    #letter-grid {
+        margin-top: 4px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .key-box {
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+
+    .letter-grid-row {
+        gap: 2px;
+    }
+
+    .letter-box {
+        flex-grow: 1;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+}
