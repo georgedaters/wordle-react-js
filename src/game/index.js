@@ -5,8 +5,6 @@ import useKeyPress from "./useKeyPress";
 
 const Game = ({ currentWord, onPickNewWord }) => {
 
-    console.log(`Game. Current word: ${currentWord}`);
-
     const {
         guesses,
         currentGuess,
@@ -122,7 +120,7 @@ const Game = ({ currentWord, onPickNewWord }) => {
             <WordGrid Words={words} />
 
             <div className="end-game-container">
-                {solvedState == "lost" && <div>You lost :( </div>}
+                {solvedState == "lost" && <div>You lost :( The correct word was "{currentWord.toUpperCase()}"</div>}
                 {solvedState == "won" && <div>Well done, you guessed the correct word!</div>}
                 {!solvedState && guesses.length > 0 && (<button onClick={giveUp} className="big-button">Give up</button>)}
                 {solvedState && (<button onClick={pickAnotherWord} className="big-button button-green">Play Again</button>)}
